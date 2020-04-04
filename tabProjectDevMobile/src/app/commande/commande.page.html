@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Commandes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let commande of commandes">
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-grid>
+            <ion-label>{{commande.plat.nom}}</ion-label>
+          </ion-grid>
+          <ion-icon   name="trash" color="danger"  (click)="delete(commande.id)">Supprimer</ion-icon>
+        </ion-item>
+      </ion-card-content> 
+    </ion-card>
+
+
+  </ion-list>
+
+</ion-content>

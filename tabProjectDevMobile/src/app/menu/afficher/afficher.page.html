@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>afficher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title *ngIf="statusMenu != 'vide'">Menu:  {{menu.titre}}</ion-title>    
+  <ion-title *ngIf="statusMenu != 'vide'">date : {{menu.jour}}</ion-title>
+  <ion-title *ngIf="statusMenu != 'vide'" >plats</ion-title>
+  <ion-title *ngIf="statusMenu == 'vide'"> pas de menu du jour</ion-title>
+  <ion-list *ngFor="let plat of menu.plats">
+        <ion-item>
+          <ion-avatar item-start>
+           
+
+          </ion-avatar>
+
+          <ion-grid>
+
+            <ion-label>{{plat.nom}}</ion-label>
+            <ion-label>{{plat.prix}} fcfa  </ion-label>
+            
+            
+          </ion-grid>
+          <ion-button  (click)="commander(menu.id,plat.id)">commander</ion-button>
+        </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-tabs >
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="plat" *ngIf="typeAdmin === true">
+      <ion-icon name="restaurant"></ion-icon>
+      <ion-label>Plat</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="menu" *ngIf="typeAdmin === true" >
+      <ion-icon name="grid"></ion-icon>
+      <ion-label>Menu</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="menu/afficher" *ngIf="typeAdmin === false">
+      <ion-icon name="grid"></ion-icon>
+      <ion-label>Menu</ion-label>
+    </ion-tab-button>
+     
+      <ion-tab-button tab="commande" >
+        <ion-icon name="grid"></ion-icon>
+        <ion-label>commandes</ion-label>
+      </ion-tab-button>
+
+    <ion-tab-button tab="compte">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>compte</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

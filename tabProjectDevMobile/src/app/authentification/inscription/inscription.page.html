@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #utilisateur="ngForm" (ngSubmit) = "register(utilisateur.value)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">username</ion-label>
+        <ion-input type="text" name="username" ngModel></ion-input>
+        </ion-item>
+      <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="Email" name="email" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label position="stacked">Mot de passe</ion-label>
+      <ion-input name="password" ngModel type="password"></ion-input>
+      </ion-item>
+      </ion-list>
+      <ion-button type="submit" expand="full">S'inscrire</ion-button>
+      <a routerLink="/connexion">connexion</a>
+  </form>
+</ion-content>

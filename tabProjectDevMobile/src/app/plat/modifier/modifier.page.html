@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Modifier
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #plat="ngForm" (ngSubmit) = "update()" *ngIf="platcourant">
+    <div>
+    
+      <ion-label>Nom :</ion-label>
+      <ion-input type="text" name="nom" [(ngModel)]="platcourant.nom"></ion-input>
+    
+  </div>
+  <div>
+    
+      <ion-label>Prix</ion-label>
+      <ion-input type="text" name="prix" [(ngModel)]="platcourant.prix"></ion-input>
+    
+  </div>
+  <div>
+    
+      <ion-label>Description</ion-label>
+      <ion-input type="text" name="description" [(ngModel)]="platcourant.description"></ion-input>
+    
+  </div>
+
+  <div>
+    
+    <ion-label>Image :</ion-label>
+    <ion-input type="text" name="image" ></ion-input>
+  
+</div>
+  <div>
+    <ion-button type="submit" block>Modifier le plat</ion-button>
+  </div>
+  </form>
+</ion-content>

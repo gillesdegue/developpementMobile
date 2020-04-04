@@ -1,0 +1,7 @@
+{
+  "name": "tabProject",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

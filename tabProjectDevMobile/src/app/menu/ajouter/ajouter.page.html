@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ajouter menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #menu="ngForm" (ngSubmit) = "add(menu.value)">
+    <div>
+    
+      <ion-label>titre :</ion-label>
+      <ion-input type="text" name="titre" ngModel></ion-input>
+    
+  </div>
+  <div>
+    
+    <ion-label>date :</ion-label>
+    <ion-datetime  name="jour" ngModel></ion-datetime>
+</div>
+  <div>
+    
+    <ion-label>plats :</ion-label>
+    <ion-select name="plats"  ngModel placeholder="selectionner les plats de votre menu"  multiple okText="valider" cancelText=""  >
+      <ion-select-option value="{{plat.id}}" *ngFor="let plat of plats">{{plat.nom }}</ion-select-option>
+    </ion-select>
+  
+</div>
+  <div>
+    <ion-button type="submit" block>Ajouter un menu</ion-button>
+  </div>
+  </form>
+</ion-content>
+
+

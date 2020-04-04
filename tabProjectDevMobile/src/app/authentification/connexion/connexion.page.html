@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>page de connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #utilisateur="ngForm" (ngSubmit) = "login(utilisateur.value)">
+    <ion-list>
+      <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="text" name="identifier" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label position="stacked">Mot de passe</ion-label>
+      <ion-input name="password" ngModel type="password"></ion-input>
+      </ion-item>
+      </ion-list>
+      <ion-button type="submit" expand="full">Se connecter</ion-button>
+      <a routerLink="/inscription">S'inscrire</a>
+      <a class="passwordLost" routerLink="/reset-password">Mot de passe perdu?</a>
+  </form>
+  
+</ion-content>
+
+
+
+

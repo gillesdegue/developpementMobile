@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ajouter plat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <form #plat="ngForm" (ngSubmit) = "add(plat.value)">
+        <div>
+        
+          <ion-label>Nom :</ion-label>
+          <ion-input type="text" name="nom" ngModel></ion-input>
+        
+      </div>
+      <div>
+        
+          <ion-label>Prix</ion-label>
+          <ion-input type="text" name="prix" ngModel></ion-input>
+        
+      </div>
+      <div>
+        
+          <ion-label>Description</ion-label>
+          <ion-input type="text" name="description" ngModel></ion-input>
+        
+      </div>
+
+      <div>
+        
+        <ion-label>Image :</ion-label>
+        <ion-input type="text" name="image" ngModel></ion-input>
+      
+    </div>
+      <div>
+        <ion-button type="submit" block>Ajouter un plat</ion-button>
+      </div>
+      </form>
+</ion-content>
