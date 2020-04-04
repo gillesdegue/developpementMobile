@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "menus",
+  "info": {
+    "name": "menu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "plats": {
+      "collection": "plat"
+    },
+    "jour": {
+      "type": "date"
+    },
+    "commandes": {
+      "via": "menu",
+      "collection": "commande"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "commandes",
+  "info": {
+    "name": "commande"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "menu": {
+      "model": "menu",
+      "via": "commandes"
+    },
+    "utilisateur": {
+      "type": "string"
+    },
+    "plat": {
+      "model": "plat",
+      "via": "commandes"
+    }
+  }
+}
